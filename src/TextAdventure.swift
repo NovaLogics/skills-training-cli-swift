@@ -7,26 +7,30 @@ var location = "forest"
 func describeLocation() {
     switch location {
     case "forest":
+        print("🌲 You are in a Dark Forest 🌲")
         print("🌲🐅🌳🌿🦍🌴🌳🌳🐊🌱🌿🌴🌳🍃🦁🌳🌳")
-        print("🌲 You are in a dark Forest 🌲")
         print("Paths lead north and east.")
-    case "cave":
 
-        print("🦇🕷️🕸️💀🍁🍂🕸️🦇🍂⛓🕯️🦇🧟")
-        print("🦇 You are in a spooky cave. 🦇")
+    case "cave":
+        print("🦇 You are in a Spooky Cave 🦇")
+        print("🦇🕷️🕸️💀🍁🍂🕸️🦇🍂⛓🕯️🦇🧟🕸️💀🍁🍂")
         print("Paths lead south.")
+
     case "mountain":
-        print("🍃⛰️⛰️⛰️🏔☁️⛰🌿🌻☀️☁️🏝️🚵🏽‍♂️💚🏕️")
-        print("⛰ You are on a mountain. ⛰")
+        print("⛰ You are on a Mountain ⛰")
+        print("🍃⛰️⛰️⛰️🏔☁️⛰🌿🌻☀️☁️🏝️🚵🏽‍♂️💚🏕️⛰️⛰️🏔☁️")
         print("The only path leads west.")
+
     default:
         print("⚠ You are lost. ⚠")
     }
 }
 
 print("Welcome to the Adventure Game!")
+print("____________________________________________________________")
 
 while true {
+    print()
     describeLocation()
     print("____________________________________________________________")
     print("> What do you want to do? | go north/east/south/west or quit")
