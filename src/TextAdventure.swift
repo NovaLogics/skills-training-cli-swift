@@ -13,6 +13,7 @@ func describeLocation() {
         print("🦇 You are in a spooky cave. 🦇")
          print("Paths lead south.")
     case "mountain":
+        print("˚˖𓍢ִ໋🍃˚.⛰️⋆☁️࿐ ࿔*:･ﾟོ༘₊⁺☀︎₊⁺⋆.˚")
         print("⛰ You are on a mountain. ⛰")
         print("The only path leads west.")
     default:
