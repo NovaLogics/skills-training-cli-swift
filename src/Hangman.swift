@@ -1,5 +1,7 @@
 import Foundation
 
+// Hangman
+
 let word = "swift"
 var guessedLetters: [Character] = []
 var remainingAttempts = 6
@@ -18,6 +20,8 @@ func displayWord() {
 }
 
 print("Welcome to Hangman!")
+print("___________________")
+
 print("You have \(remainingAttempts) attempts to guess the word.")
 
 while remainingAttempts > 0 {
@@ -25,22 +29,29 @@ while remainingAttempts > 0 {
     print("Guess a letter: ", terminator: "")
     
     if let guess = readLine(), guess.count == 1, let letter = guess.lowercased().first {
+
         if guessedLetters.contains(letter) {
-            print("You've already guessed that letter.")
-        } else if word.contains(letter) {
+            print("> You've already guessed that letter.")
+        } 
+        else if word.contains(letter) {
             guessedLetters.append(letter)
-            print("Correct!")
-        } else {
+            print("> Correct!")
+        } 
+        else {
             guessedLetters.append(letter)
             remainingAttempts -= 1
-            print("Incorrect! \(remainingAttempts) attempts left.")
+            print("> Incorrect! \(remainingAttempts) attempts left.")
         }
         
         if word.allSatisfy({ guessedLetters.contains($0) }) {
-            print("Congratulations! You've guessed the word: \(word)")
+            print(">> Congratulations! You've guessed the word: \(word)")
             break
         }
-    } else {
+
+        print()
+
+    } 
+    else {
         print("Please guess a single letter.")
     }
 }
