@@ -1,5 +1,7 @@
 import Foundation
 
+//Text Adventure
+
 var location = "forest"
 
 func describeLocation() {
@@ -19,7 +21,10 @@ print("Welcome to the Adventure Game!")
 
 while true {
     describeLocation()
-    print("What do you want to do? (go north/east/south/west or quit)")
+    print("What do you want to do?")
+    print("go north(n) /east(e) /south(s) /west(w) or quit")
+    print("Ex: go north or go n")
+    print("______________________________________________")
     
     if let action = readLine()?.lowercased() {
         switch action {
