@@ -1,5 +1,7 @@
 import Foundation
 
+// Number Guessing Game
+
 // Generate a random number between 1 and 100
 let targetNumber = Int.random(in: 1...100)
 var guess: Int? = nil
@@ -7,6 +9,7 @@ var numberOfTries = 0
 
 print("Welcome to the Number Guessing Game!")
 print("Guess a number between 1 and 100.")
+print("----------------------------------------------------")
 
 while guess != targetNumber {
 
